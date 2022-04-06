@@ -1,0 +1,59 @@
+#+STARTUP: overview
+
+#+begin_src ledger :noweb yes
+2021/11/14 * Starting balance
+    assets:banca                €4306.15
+    assets:yap                  €1.05
+    assets:contanti             €26.50
+    equity:apertura-registro
+#+end_src
+
+* Internal movements
+#+begin_src ledger :noweb yes
+2021/11/14 * ricarica yap
+    assets:yap                €25
+    assets:banca
+#+end_src
+
+
+* Entries
+
+* Expenses
+#+begin_src ledger :noweb yes
+2021/11/14 * Netflix
+    expenses:tempo-libero     €6.40
+    assets:yap
+
+2021/11/15 * alice pizza
+    expenses:uscite           €11.13
+    assets:banca
+
+2021/11/15 * Amazon
+    expenses:self-care        €51.72
+    assets:banca
+
+2021/11/15 * Spesa aldi
+    expenses:spesa:aldi       €6.15
+    assets:banca
+
+2021/11/15 * Caffe uni
+    expenses:coccole          €0.60
+    assets:contanti
+#+end_src
+
+#+RESULTS:
+#+begin_example
+             €-76.00  assets
+             €-69.00    banca
+              €-0.60    contanti
+              €-6.40    yap
+              €76.00  expenses
+               €0.60    coccole
+              €51.72    self-care
+               €6.15    spesa:aldi
+               €6.40    tempo-libero
+              €11.13    uscite
+--------------------
+                   0
+#+end_example
+

@@ -1,0 +1,11 @@
+(scroll-bar-mode -1)    ;disable scrollbar
+(tool-bar-mode -1)      ;disable toolbar
+(tooltip-mode -1)       ;disable tool tips
+(menu-bar-mode -1)      ;disable menu bar
+(set-fringe-mode 10)    ;give some space
+(setq visible-bell t)   ;visual bell
+(setq-default
+    fill-column 75 
+    inhibit-startup-screen t
+    tab-width 4
+ )

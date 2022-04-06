@@ -1,0 +1,47 @@
+super + {_, shift + } Return
+    alacritty {_,--working-directory $(cat /home/tlt/.cache/working-directory)}
+
+super + a
+    xfce4-appfinder
+
+super + b
+    firefox
+
+super + d
+    rofi -show run
+
+super + n
+    alacritty -e newsboat
+
+super + p
+    keepass
+
+super + t
+    alacritty -e htop
+
+super + v
+    pavucontrol
+
+super + x 
+    arcolinux-logout
+
+super + {_, shift + }z
+    {alacritty -e ranger, thunar}
+
+super + Escape
+    xkill
+
+super + comma
+    touchpad-toggle.sh
+
+Print
+    scrot 'screenshot_%Y%m%d-%H%M%S_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+XF86Audio{Raise,Lower}Volume
+    amixer -q set Master 5%{+,-}
+
+XF86AudioMute
+    amixer -q set Master toggle
+
+super + shift + {Up,Down}
+    brightnessctl s 10{+,-}

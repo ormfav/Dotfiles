@@ -1,0 +1,26 @@
+#list
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -la'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+
+#fix obvious typo's
+alias cd..='cd ..'
+alias pdw="pwd"
+
+alias g++17="g++ -std=c++17"
+
+alias c="clear"
+alias eb="rm -rf ~/Trash/*"
+
+alias vm="bindkey -v"
+alias em="bindkey -e"
+
+alias eliminte-the-orphans='sudo pacman -Rns $(pacman -Qtdq)'
+
+alias mk=latexmk
+
+#search history with typed characters
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward

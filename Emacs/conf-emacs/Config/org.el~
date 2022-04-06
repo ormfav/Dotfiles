@@ -1,0 +1,75 @@
+(defun ormfav/org-mode-setup ()
+	(org-indent-mode)
+	(visual-line-mode 1))
+(use-package org
+  :hook
+	(org-mode . ormfav/org-mode-setup)
+  :config
+	(setq org-ellipsis " ▾"
+		  org-hide-leading-stars 3)
+	(global-set-key (kbd "C-c l s") 'org-store-link)
+	(global-set-key (kbd "C-c l i ") 'org-insert-link))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages '((shell . t)
+							 (python . t)))
+
+(setq org-src-fontify-natively t) ;; Syntax highlight in #+BEGIN_SRC blocks
+
+(setq org-todo-keywords '((sequence "TODO(t)" "NEXT(n)" "WAIT(w)" "PROG(p)" "IMMD(i)" "|" "DONE(d)")
+						  (sequence "|" "CANC(c)")))
+
+(setq org-default-notes-file "~/Org/.notes.org")
+
+;; Define the custum capture templates
+(setq org-capture-templates
+       '(("t" "todo" entry (file org-default-notes-file)
+	  "* TODO %?\n%u\n%a\n" :clock-in t :clock-resume t)
+	 ("m" "Meeting" entry (file org-default-notes-file)
+	  "* MEETING with %? :MEETING:\n%t" :clock-in t :clock-resume t)
+	 ("d" "Diary" entry (file+datetree "~/org/diary.org")
+	  "* %?\n%U\n" :clock-in t :clock-resume t)
+	 ("i" "Idea" entry (file org-default-notes-file)
+	  "* %? :IDEA: \n%t" :clock-in t :clock-resume t)
+	 ("n" "Next Task" entry (file+headline org-default-notes-file "Tasks")
+	  "** NEXT %? \nDEADLINE: %t") ))
+
+
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode))
+
+(setq org-agenda-files
+      '("~/Org/courses.org"))
+
+(use-package org-roam
+  :ensure t
+  :init (setq org-roam-v2-ack t)
+  :custom (org-roam-directory "~/SecondBrain")
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+		 ("C-c n f" . org-roam-node-find)
+		 ("C-c n d" . org-roam-dailies-capture-today)
+		 ("C-c n D" . org-roam-dailies-goto-date))
+		 (:map org-mode-map
+			(("C-c n i" . org-roam-node-insert)
+			 ("C-c n o" . org-id-get-create)
+			 ("C-c n t" . org-roam-tag-add)
+			 ("C-c n a" . org-roam-alias-add)
+			 ("C-c n l" . org-roam-buffer-toggle)
+			 ("C-c n <" . org-roam-dailies-previous-note)
+			 ("C-c n >" . org-roam-dailies-next-note)))
+  :config (org-roam-setup))
+(setq org-roam-dailies-directory "Dailies/")
+(setq org-roam-dailies-capture-templates
+      '(("d" "default" entry "* Sogni\n%?\n\n* Emozioni\n"
+         :if-new (file+head "%<%Y-%m-%d>.org"
+                            "#+title: %<%Y-%m-%d>\n"))))
+
+(defun ormfav/org-mode-visual-fill ()
+  (setq visual-fill-column-width 110
+        visual-fill-column-center-text t)
+  (visual-fill-column-mode 1))
+
+(use-package visual-fill-column
+  :defer t
+  :hook (org-mode . ormfav/org-mode-visual-fill))

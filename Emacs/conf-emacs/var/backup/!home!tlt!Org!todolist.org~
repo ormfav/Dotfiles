@@ -1,0 +1,122 @@
+#+STARTUP: overview
+
+* Uni
+** TODO Continui
+*** TODO Schemi
+**** TODO INTRO
+***** DONE Termodinamica
+***** TODO Tensori 1
+***** TODO Tensori 2
+***** DONE Foglio 1
+***** TODO Foglio 2
+**** TODO FLUIDOSTATICA
+***** TODO Foglio 3 
+- [X] Tipi di forze
+- [X] Tensore degli sforzi
+- [X] Intro fluidostatica
+- [X] Continuità pressione
+- [ ] Tensione superficiale
+***** DONE Foglio 4 
+- [ ] Eq di eulero
+***** DONE Foglio 5
+***** DONE Foglio 6
+- [X] Fluidi incomprimibili
+- [X] Esempi di applicazioni
+- [X] Forza di Archimede
+**** TODO FLUIDODINAMICA FLUIDI PERFETTI [3d]
+***** TODO Foglio 7
+SCHEDULED: <2022-03-09 Wed>
+***** TODO Foglio 8
+SCHEDULED: <2022-03-09 Tue>
+***** TODO Foglio 9
+***** TODO Foglio 10
+***** TODO Foglio 11
+**** TODO FLUIDI REALI [7d]
+***** TODO Foglio 12
+***** TODO Foglio 13
+***** TODO Foglio 14
+***** TODO Foglio 15
+***** TODO Foglio 16
+***** TODO Foglio 17
+***** TODO Foglio 18
+***** TODO Foglio 19
+***** TODO Foglio 20
+**** TODO CALORE [4d]
+***** TODO Foglio 21
+***** TODO Foglio 22
+***** TODO Foglio 23
+***** TODO Foglio 24
+***** TODO Foglio 25
+** DONE Molti corpi 1
+*** TODO Ripetizioni
+**** DONE Seconda quantizzazione
+**** DONE Jellium
+**** TODO Hartree Fock
+**** DONE Gellman Low
+**** DONE Formula di riduzione
+**** DONE Teorema di Wick
+**** DONE Diagrammi di Feynman
+**** DONE Funzioni di green
+**** DONE Self energia
+**** TODO Polarizzazione e interazione effettiva
+**** DONE Vertice e edin
+**** DONE Lehman
+**** DONE Quasi particelle
+**** DONE Risposta lineare
+**** DONE Cristallo di wigner
+**** DONE Termodinamica HEG
+**** DONE DFT
+*** TODO Integrazioni
+**** TODO Hopping e anderson
+** TODO Molti corpi 2
+** TODO Labo simulazione numerica
+** TODO Geometria 2
+** TODO Sistemi dinamici 1
+** TODO Sistemi dinamici 2
+** TODO Proteine 1
+** TODO Sistemi quantistici aperti
+** TODO Fisica statistica avanzata
+** TODO Sistemi complessi 
+** TODO Elettrodinamica
+* Personale
+** Haskell 
+** PROG Filosofia del buddismo zen  
+*** TODO Ch1
+- [ ] Prima lettura
+*** TODO Ch2
+- [ ] Prima lettura
+*** TODO Ch3
+- [ ] Prima lettura
+*** TODO Ch4
+- [ ] Prima lettura
+*** TODO Ch5
+- [ ] Prima lettura
+** chitarra
+* Casa
+** Faccende domestiche
+*** TODO Bagno (lavandino, wc, bidet)
+*** TODO Bagno (doccia, vetri)
+*** TODO Cucina (piano cucina)
+DEADLINE: <2021-12-06 Mon +3d>
+:PROPERTIES:
+:LAST_REPEAT: [2021-11-23 Tue 17:53]
+:END:
+- State "DONE"       from "TODO"       [2021-11-23 Tue 17:53]
+*** TODO Cucina (credenza)
+DEADLINE: <2022-01-17 Mon +2w>
+*** TODO Finestre
+*** TODO Aspirapolvere 
+DEADLINE: <2021-12-02 Thu +3d>
+:PROPERTIES:
+:LAST_REPEAT: [2021-11-28 Sun 22:50]
+:END:
+- State "DONE"       from "TODO"       [2021-11-28 Sun 22:50]
+- State "DONE"       from "TODO"       [2021-11-23 Tue 17:53]
+*** TODO Lavare pavimento
+DEADLINE: <2021-12-05 Sun +1w>
+:PROPERTIES:
+:LAST_REPEAT: [2021-11-28 Sun 22:50]
+:END:
+- State "DONE"       from "TODO"       [2021-11-28 Sun 22:50]
+- State "DONE"       from "TODO"       [2021-11-23 Tue 17:53]
+  
